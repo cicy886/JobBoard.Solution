@@ -1,0 +1,19 @@
+@using JobBoard.Models;
+
+<h1>Plateau Group Job Board</h1>
+
+@if (Model.Count == 0)
+{
+  <p>There are no jobs in the list.</p>
+}
+<ul>
+  @foreach (JobInformation job in Model)
+  {
+    <li> @job.Title </li>
+    <li>@job.Description</li>
+    <li>@job.Name</li>
+    <li>@job.Email</li>
+    <li>@job.PhoneNumber</li>
+  }
+</ul>
+<a href="/jobs/new">Add a new job posting.</a>
